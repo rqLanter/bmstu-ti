@@ -6,11 +6,122 @@
   <meta name="description" content="Портфолио студента МГТУ им. Н.Э. Баумана">
   <title>Моё портфолио | Веб-разработка</title>
   
-  <!-- Подключение стилей из тренажёров -->
   <link rel="stylesheet" href="css/outlines.css">
+  
+  <!-- ✅ ВСЕ СТИЛИ ДОЛЖНЫ БЫТЬ ЗДЕСЬ -->
+  <style>
+    /* Навигация */
+    .main-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .nav-list {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 1.5rem;
+    }
+
+    /* Контейнер логотипа */
+    .logo-container {
+      position: relative;
+      width: 100px;
+      height: 100px;
+      /* 📍 СДВИГ ЛОГОТИПА ЗДЕСЬ */
+      margin-left: 20px;  /* вправо */
+      margin-top: 10px;   /* вниз */
+    }
+
+    /* Само изображение логотипа */
+    .main-logo {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+  </style>
 </head>
 <body>
-  <!-- Сюда будем добавлять контент из макета -->
-  
+
+  <!-- ✅ ОДИН HEADER, ОДИН NAV -->
+  <header>
+    <div class="container">
+      <nav class="main-nav">
+        <div class="logo-container">
+          <img src="img/main-logo.svg" alt="Логотип" class="main-logo">
+        </div>
+        
+        <ul class="nav-list">
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#skills">Навыки</a></li>
+          <li><a href="#interests">Интересы</a></li>
+          <li><a href="#contacts">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="intro" class="section-intro">
+      <div class="container">
+        <h1>Сергей Константинов</h1>
+        <p class="profession">Программист</p>
+        <img src="img/user-photo.png" alt="Фото Сергея Константинова" width="200" height="200">
+      </div>
+    </section>
+
+    <section id="about" class="section-about">
+      <div class="container">
+        <h2>Пара слов обо мне</h2>
+        <div class="about-text">
+          <p>Привет 👋</p>
+          <p>В данный момент я учусь в магистратуре МГТУ им. Н. Э. Баумана...</p>
+          <p>В прошлом году защитил диплом бакалавра на тему «Разработка очень сложного программного комплекса для супер-важной цели». Работа была высоко оценена комиссией.</p>
+          <p>Также я уже успел поработать инженером в одном провайдере в Пушкино, но в будущем планирую стать разработчиком сложных программных комплексов и систем.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section-skills">
+      <div class="container">
+        <h2>Мои навыки</h2>
+        <img src="img/section-skills.svg" alt="Навыки" width="800" height="400">
+        <dl class="skills-list">
+          <dt>HTML</dt>
+          <dd>
+            <span class="skill-name">html</span>
+            <span class="skill-percent">80%</span>
+            <progress value="80" max="100"></progress>
+          </dd>
+        </dl>
+      </div>
+    </section>
+
+    <section id="interests" class="section-interests">
+      <div class="container">
+        <h2>Мои интересы</h2>
+        <p>Наибольший интерес для меня в данный момент представляет...</p>
+        <p>Но помимо учёбы и работы я также люблю играть на барабанах и читать...</p>
+      </div>
+    </section>
+
+    <!-- ✅ Исправлена секция контактов -->
+    <section id="contacts" class="section-contacts">
+      <div class="container">
+        <h2>Контакты</h2>
+        <img src="img/section-contacts.svg" alt="Контакты" width="800" height="400">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Сергей Константинов</p>
+    </div>
+  </footer>
+
 </body>
 </html>
