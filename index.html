@@ -8,50 +8,13 @@
   
   <link rel="stylesheet" href="css/outlines.css">
   
-  <!-- ✅ ВСЕ СТИЛИ ДОЛЖНЫ БЫТЬ ЗДЕСЬ -->
-  <style>
-    /* Навигация */
-    .main-nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 2rem;
-    }
-    .nav-list {
-      display: flex;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      gap: 1.5rem;
-    }
 
-    /* Контейнер логотипа */
-    .logo-container {
-      position: relative;
-      width: 100px;
-      height: 100px;
-      /* 📍 СДВИГ ЛОГОТИПА ЗДЕСЬ */
-      margin-left: 20px;  /* вправо */
-      margin-top: 10px;   /* вниз */
-    }
 
-    /* Само изображение логотипа */
-    .main-logo {
-      width: 100%;
-      height: 100%;
-      display: block;
-      object-fit: contain;
-    }
-  </style>
-</head>
-<body>
 
-  <!-- ✅ ОДИН HEADER, ОДИН NAV -->
+
   <header>
-    <div class="container">
-      <nav class="main-nav">
-        <div class="logo-container">
-          <img src="img/main-logo.svg" alt="Логотип" class="main-logo">
+
+          <img src="img/main-logo.svg" alt="Логотип" class="main-logo" width="50" height="50">
         </div>
         
         <ul class="nav-list">
@@ -66,19 +29,19 @@
 
   <main>
     <section id="intro" class="section-intro">
-      <div class="container">
+
         <h1>Сергей Константинов</h1>
         <p class="profession">Программист</p>
-        <img src="img/user-photo.png" alt="Фото Сергея Константинова" width="200" height="200">
+        <img src="img/user-photo.png" alt="Фото Сергея Константинова" width="400" height="400"> 
       </div>
     </section>
 
     <section id="about" class="section-about">
-      <div class="container">
+
         <h2>Пара слов обо мне</h2>
         <div class="about-text">
           <p>Привет 👋</p>
-          <p>В данный момент я учусь в магистратуре МГТУ им. Н. Э. Баумана...</p>
+          <p>В данный момент я учусь в магистратуре МГТУ им. Н. Э. Баумана по направлению «Информатика и вычислительная техника</p>
           <p>В прошлом году защитил диплом бакалавра на тему «Разработка очень сложного программного комплекса для супер-важной цели». Работа была высоко оценена комиссией.</p>
           <p>Также я уже успел поработать инженером в одном провайдере в Пушкино, но в будущем планирую стать разработчиком сложных программных комплексов и систем.</p>
         </div>
@@ -86,40 +49,76 @@
     </section>
 
     <section id="skills" class="section-skills">
-      <div class="container">
+
         <h2>Мои навыки</h2>
-        <img src="img/section-skills.svg" alt="Навыки" width="800" height="400">
-        <dl class="skills-list">
-          <dt>HTML</dt>
-          <dd>
-            <span class="skill-name">html</span>
-            <span class="skill-percent">80%</span>
-            <progress value="80" max="100"></progress>
-          </dd>
-        </dl>
-      </div>
-    </section>
+                <section id="skills">
+            <h2>Мои навыки</h2>
+            <div>
+                Сортировать
+                <button>По назанию</button>
+                <button>По уровню</button>
+            </div>
+            <dl>
+                <dt>html</dt>
 
-    <section id="interests" class="section-interests">
-      <div class="container">
-        <h2>Мои интересы</h2>
-        <p>Наибольший интерес для меня в данный момент представляет...</p>
-        <p>Но помимо учёбы и работы я также люблю играть на барабанах и читать...</p>
-      </div>
-    </section>
+                <dd>
+                    <div style="width: 40%;">40%</div>
+                </dd>
+                <dt>css</dt>
 
-    <!-- ✅ Исправлена секция контактов -->
-    <section id="contacts" class="section-contacts">
-      <div class="container">
-        <h2>Контакты</h2>
-        <img src="img/section-contacts.svg" alt="Контакты" width="800" height="400">
-      </div>
-    </section>
-  </main>
+                <dd>
+                    <div style="width: 40%;">40%</div>
+                </dd>
+                <dt>python</dt>
+                
+                <dd>
+                    <div style="width: 40%;">40%</div>
+                </dd>
+                <dt>c++</dt>
+
+                <dd>
+                    <div style="width: 40%;">40%</div>
+                </dd>
+                <dt>HTML</HTML></dt>
+
+                <dd>
+                    <div style="width: 40%;">40%</div>
+                </dd>
+
+            </dl>
+
+        <section id="interest">
+            <h2>Мои интересы</h2>
+            <p>Наибольший интерес для меня в данный момент представляет программирование и изучение искусственного интеллекта.</p>
+            <p>
+                Но помимо учёбы и работы я также люблю играть на барабанах и читать зарубежную классику.
+            </p>
+        </section>
+
+        <section id="contacts">
+            <h2>Мои контакты</h2>
+            <ul>
+                <li>
+                    <a href="tel:+79991234567">+7 999 123-4567</a>
+                </li>
+                    
+                <li>
+                    <a href="mailto:email@mail.ru">email@mail.ru</a>
+                </li>   
+            </ul>
+            
+            <ul>
+                <li><a href="https://www.i*******m.com/">I*****m</a></li>
+                <li><a href="https://github.com/">Github</a></li>
+                <li><a href="https://vk.com/">ВК</a></li>
+                <li><a href="https://web.telegram.org/a/">Telegram</a></li>  
+            </ul>
+        </section>
+    </main>
+    <footer>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2026 Сергей Константинов</p>
+      <p>2026 Сергей Константинов</p>
     </div>
   </footer>
 
