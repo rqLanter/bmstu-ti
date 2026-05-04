@@ -9,6 +9,7 @@
 </head>
 <body>
 
+  <!-- Шапка сайта -->
   <header>
     <div class="header-container">
       <img src="img/main-logo.svg" alt="Логотип" class="main-logo" width="50" height="50">
@@ -23,7 +24,10 @@
     </div>
   </header>
 
+  <!-- Основное содержимое -->
   <main>
+    
+    <!-- Секция: Интро -->
     <section id="intro" class="section-intro">
       <div class="intro-content">
         <h1>Сергей Константинов</h1>
@@ -32,6 +36,7 @@
       </div>
     </section>
 
+    <!-- Секция: Обо мне -->
     <section id="about" class="section-about">
       <div class="about-content">
         <h2>Пара слов обо мне</h2>
@@ -44,44 +49,60 @@
       </div>
     </section>
 
+    <!-- Секция: Навыки (исправлен дубликат ID) -->
     <section id="skills" class="section-skills">
       <div class="skills-content">
         <h2>Мои навыки</h2>
         <div class="skills-controls">
-          Сортировать
-          <button>По названию</button>
-          <button>По уровню</button>
+          <span>Сортировать:</span>
+          <button type="button">По названию</button>
+          <button type="button">По уровню</button>
         </div>
-        <dl>
-          <dt>HTML</dt><dd><div style="width: 40%;">40%</div></dd>
-          <dt>CSS</dt><dd><div style="width: 40%;">40%</div></dd>
-          <dt>Python</dt><dd><div style="width: 40%;">40%</div></dd>
-          <dt>C++</dt><dd><div style="width: 40%;">40%</div></dd>
+        <dl class="skills-list">
+          <dt>HTML</dt>
+          <dd><div style="width: 40%;">40%</div></dd>
+          
+          <dt>CSS</dt>
+          <dd><div style="width: 40%;">40%</div></dd>
+          
+          <dt>Python</dt>
+          <dd><div style="width: 40%;">40%</div></dd>
+          
+          <dt>C++</dt>
+          <dd><div style="width: 40%;">40%</div></dd>
         </dl>
       </div>
     </section>
 
+    <!-- Секция: Интересы (исправлен ID: interest → interests) -->
     <section id="interests">
-      <h2>Мои интересы</h2>
-      <p>Наибольший интерес для меня в данный момент представляет программирование и изучение искусственного интеллекта.</p>
-      <p>Но помимо учёбы и работы я также люблю играть на барабанах и читать зарубежную классику.</p>
+      <div class="interests-content">
+        <h2>Мои интересы</h2>
+        <p>Наибольший интерес для меня в данный момент представляет программирование и изучение искусственного интеллекта.</p>
+        <p>Но помимо учёбы и работы я также люблю играть на барабанах и читать зарубежную классику.</p>
+      </div>
     </section>
 
+    <!-- Секция: Контакты -->
     <section id="contacts">
-      <h2>Мои контакты</h2>
-      <ul>
-        <li><a href="tel:+79991234567">+7 999 123-4567</a></li>
-        <li><a href="mailto:email@mail.ru">email@mail.ru</a></li>
-      </ul>
-      <ul>
-        <li><a href="https://www.instagram.com/">Instagram</a></li>
-        <li><a href="https://github.com/">Github</a></li>
-        <li><a href="https://vk.com/">ВК</a></li>
-        <li><a href="https://web.telegram.org/a/">Telegram</a></li>
-      </ul>
+      <div class="contacts-content">
+        <h2>Мои контакты</h2>
+        <ul class="contacts-list">
+          <li><a href="tel:+79991234567">+7 999 123-4567</a></li>
+          <li><a href="mailto:email@mail.ru">email@mail.ru</a></li>
+        </ul>
+        <ul class="social-list">
+          <li><a href="https://www.instagram.com/">Instagram</a></li>
+          <li><a href="https://github.com/">Github</a></li>
+          <li><a href="https://vk.com/">ВК</a></li>
+          <li><a href="https://web.telegram.org/a/">Telegram</a></li>
+        </ul>
+      </div>
     </section>
+
   </main>
 
+  <!-- Подвал сайта (один, без вложенности) -->
   <footer>
     <p>2026 Сергей Константинов</p>
   </footer>
