@@ -3,99 +3,209 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Портфолио студента МГТУ им. Н.Э. Баумана">
   <title>Моё портфолио | Веб-разработка</title>
 
+  <!--подключение шрифтов -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
 
+  <!--сначала normalize, потом свои стили -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
+<body>
+  <!--
+    header и main оборачиваем в один container,
+    а у footer оборачиваем только содержимое.
+  -->
   <div class="container">
     <header class="main-header">
-      <img src="img/main-logo.svg" alt="Логотип" width="60" height="60">
       <nav class="main-nav">
-        <ul>
-          <li><a href="#about">Обо мне</a></li>
-          <li><a href="#skills">Навыки</a></li>
-          <li><a href="#interests">Интересы</a></li>
-          <li><a href="#contacts">Контакты</a></li>
-        </ul>
+        <a href="#about">Обо мне</a>
+        <a href="#skills">Навыки</a>
+        <a href="#interests">Интересы</a>
+        <a href="#contacts">Контакты</a>
       </nav>
     </header>
 
     <main>
-
-      <section id="intro" class="intro">
+      <!-- секция "Обо мне" -->
+      <section class="intro" id="about">
         <h1>Сергей Константинов</h1>
         <p class="subtitle">Программист</p>
-        <img src="img/user-photo.png" alt="Фото Сергея Константинова" width="400" height="400">
-      </section>
 
-      <section id="about" class="about">
+        <!--
+          если у тебя уже есть фото, замени путь на свой.
+         
+        -->
+        <img
+          class="profile-photo"
+          src="img/photo.jpg"
+          alt="Фото Сергея Константинова"
+        >
+
         <h2>Пара слов обо мне</h2>
+
         <p>Привет 👋</p>
-        <p>В данный момент я учусь в магистратуре МГТУ им. Н. Э. Баумана по направлению «Информатика и вычислительная техника».</p>
-        <p>В прошлом году защитил диплом бакалавра на тему «Разработка очень сложного программного комплекса для супер-важной цели». Работа была высоко оценена комиссией.</p>
-        <p>Также я уже успел поработать инженером в одном провайдере в Пушкино, но в будущем планирую стать разработчиком сложных программных комплексов и систем.</p>
+
+        <p>
+          В данный момент я учусь в магистратуре МГТУ им. Н. Э. Баумана
+          по направлению «Информатика и вычислительная техника».
+        </p>
+
+        <p>
+          В прошлом году защитил диплом бакалавра на тему
+          «Разработка очень сложного программного комплекса для супер-важной цели».
+          Работа была высоко оценена комиссией.
+        </p>
+
+        <p>
+          Также я уже успел поработать инженером в одном провайдере в Пушкино,
+          но в будущем планирую стать разработчиком сложных программных
+          комплексов и систем.
+        </p>
       </section>
 
-      <section id="skills" class="skills">
+      <!-- секция навыки-->
+      <section class="skills" id="skills">
         <h2>Мои навыки</h2>
-        <div>
-          <span>Сортировать:</span>
+
+        <p class="skills-controls">
+          Сортировать:
           <button type="button">По названию</button>
           <button type="button">По уровню</button>
-        </div>
+        </p>
+
         <dl class="skill-list">
           <dt class="skill-item skill-item_html">HTML</dt>
-          <dd class="skill-level"><div style="width: 40%;">40%</div></dd>
+          <dd>
+            <div
+              class="skill-level"
+              aria-label="Уровень владения HTML: 40%"
+            >
+              <div style="width: 40%;"></div>
+            </div>
+          </dd>
 
           <dt class="skill-item skill-item_css">CSS</dt>
-          <dd class="skill-level"><div style="width: 40%;">40%</div></dd>
+          <dd>
+            <div
+              class="skill-level"
+              aria-label="Уровень владения CSS: 40%"
+            >
+              <div style="width: 40%;"></div>
+            </div>
+          </dd>
 
           <dt class="skill-item skill-item_python">Python</dt>
-          <dd class="skill-level"><div style="width: 40%;">40%</div></dd>
+          <dd>
+            <div
+              class="skill-level"
+              aria-label="Уровень владения Python: 40%"
+            >
+              <div style="width: 40%;"></div>
+            </div>
+          </dd>
 
           <dt class="skill-item skill-item_cpp">C++</dt>
-          <dd class="skill-level"><div style="width: 40%;">40%</div></dd>
+          <dd>
+            <div
+              class="skill-level"
+              aria-label="Уровень владения C++: 40%"
+            >
+              <div style="width: 40%;"></div>
+            </div>
+          </dd>
         </dl>
       </section>
 
-      <section id="interests" class="interests">
+      <!-- секция интересы -->
+      <section class="interests" id="interests">
         <h2>Мои интересы</h2>
-        <p>Наибольший интерес для меня в данный момент представляет программирование и изучение искусственного интеллекта.</p>
-        <p>Но помимо учёбы и работы я также люблю играть на барабанах и читать зарубежную классику.</p>
+
+        <p>
+          Наибольший интерес для меня в данный момент представляет
+          программирование и изучение искусственного интеллекта.
+        </p>
+
+        <p>
+          Но помимо учёбы и работы я также люблю играть на барабанах
+          и читать зарубежную классику.
+        </p>
       </section>
 
-      <section id="contacts" class="contacts">
+      <!--секция контакты -->
+      <section class="contacts" id="contacts">
         <h2>Мои контакты</h2>
 
         <ul class="contact">
-          <li><a class="contact-link contact-link_phone" href="tel:+79991234567">+7 999 123-4567</a></li>
-          <li><a class="contact-link contact-link_mail" href="mailto:email@mail.ru">email@mail.ru</a></li>
+          <li>
+            <a
+              class="contact-link contact-link_phone"
+              href="tel:+79000000000"
+            >
+              +7 900 000-00-00
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="contact-link contact-link_mail"
+              href="mailto:student@example.com"
+            >
+              student@example.com
+            </a>
+          </li>
         </ul>
 
         <ul class="social">
-          
-          <li><a class="social-link social-link_github" href="https://github.com/"><span class="visually-hidden">Github</span></a></li>
-          <li><a class="social-link social-link_vk" href="https://vk.com/"><span class="visually-hidden">ВК</span></a></li>
-          <li><a class="social-link social-link_telegram" href="https://web.telegram.org/a/"><span class="visually-hidden">Telegram</span></a></li>
+          <li>
+            <a
+              class="social-link social-link_github"
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="visually-hidden">Github</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="social-link social-link_vk"
+              href="https://vk.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="visually-hidden">ВК</span>
+            </a>
+          </li>
+
+          <li>
+            <a
+              class="social-link social-link_telegram"
+              href="https://web.telegram.org/a/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <span class="visually-hidden">Telegram</span>
+            </a>
+          </li>
         </ul>
       </section>
-
     </main>
   </div>
 
+  <!--футер -->
   <footer class="main-footer">
     <div class="container">
       <p>2026 Сергей Константинов</p>
     </div>
   </footer>
-
 </body>
 </html>
