@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Моё портфолио | Веб-разработка</title>
 
-  <!--подключение шрифтов -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -13,16 +13,13 @@
     rel="stylesheet"
   >
 
-  <!--сначала normalize, потом свои стили -->
+
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <!--
-    header и main оборачиваем в один container,
-    а у footer оборачиваем только содержимое.
-  -->
+
   <div class="container">
     <header class="main-header">
       <nav class="main-nav">
@@ -34,36 +31,28 @@
     </header>
 
     <main>
-      <!-- секция "Обо мне" -->
+
       <section class="intro" id="about">
         <h1>Сергей Константинов</h1>
         <p class="subtitle">Программист</p>
 
-        <!--
-          если у тебя уже есть фото, замени путь на свой.
-         
-        -->
         <img
           class="profile-photo"
-          src="img/photo.jpg"
+          src="img/user-photo.png"
           alt="Фото Сергея Константинова"
         >
 
         <h2>Пара слов обо мне</h2>
-
         <p>Привет 👋</p>
-
         <p>
           В данный момент я учусь в магистратуре МГТУ им. Н. Э. Баумана
           по направлению «Информатика и вычислительная техника».
         </p>
-
         <p>
           В прошлом году защитил диплом бакалавра на тему
           «Разработка очень сложного программного комплекса для супер-важной цели».
           Работа была высоко оценена комиссией.
         </p>
-
         <p>
           Также я уже успел поработать инженером в одном провайдере в Пушкино,
           но в будущем планирую стать разработчиком сложных программных
@@ -71,7 +60,7 @@
         </p>
       </section>
 
-      <!-- секция навыки-->
+
       <section class="skills" id="skills">
         <h2>Мои навыки</h2>
 
@@ -84,81 +73,60 @@
         <dl class="skill-list">
           <dt class="skill-item skill-item_html">HTML</dt>
           <dd>
-            <div
-              class="skill-level"
-              aria-label="Уровень владения HTML: 40%"
-            >
+            <div class="skill-level" aria-label="Уровень владения HTML: 40%">
               <div style="width: 40%;"></div>
             </div>
           </dd>
 
           <dt class="skill-item skill-item_css">CSS</dt>
           <dd>
-            <div
-              class="skill-level"
-              aria-label="Уровень владения CSS: 40%"
-            >
+            <div class="skill-level" aria-label="Уровень владения CSS: 40%">
               <div style="width: 40%;"></div>
             </div>
           </dd>
 
           <dt class="skill-item skill-item_python">Python</dt>
           <dd>
-            <div
-              class="skill-level"
-              aria-label="Уровень владения Python: 40%"
-            >
+            <div class="skill-level" aria-label="Уровень владения Python: 40%">
               <div style="width: 40%;"></div>
             </div>
           </dd>
 
           <dt class="skill-item skill-item_cpp">C++</dt>
           <dd>
-            <div
-              class="skill-level"
-              aria-label="Уровень владения C++: 40%"
-            >
+            <div class="skill-level" aria-label="Уровень владения C++: 40%">
               <div style="width: 40%;"></div>
             </div>
           </dd>
         </dl>
       </section>
 
-      <!-- секция интересы -->
+
       <section class="interests" id="interests">
         <h2>Мои интересы</h2>
-
         <p>
           Наибольший интерес для меня в данный момент представляет
           программирование и изучение искусственного интеллекта.
         </p>
-
         <p>
           Но помимо учёбы и работы я также люблю играть на барабанах
           и читать зарубежную классику.
         </p>
       </section>
 
-      <!--секция контакты -->
+
       <section class="contacts" id="contacts">
         <h2>Мои контакты</h2>
 
         <ul class="contact">
           <li>
-            <a
-              class="contact-link contact-link_phone"
-              href="tel:+79000000000"
-            >
-              +7 900 000-00-00
+            <a class="contact-link contact-link_phone" href="tel:+79991234567">
+              +7 999 123-4567
             </a>
           </li>
-
           <li>
-            <a
-              class="contact-link contact-link_mail"
-              href="mailto:student@example.com"
-            >
-              student@example.com
+            <a class="contact-link contact-link_mail" href="mailto:email@mail.ru">
+              email@mail.ru
             </a>
           </li>
         </ul>
@@ -174,7 +142,6 @@
               <span class="visually-hidden">Github</span>
             </a>
           </li>
-
           <li>
             <a
               class="social-link social-link_vk"
@@ -185,7 +152,6 @@
               <span class="visually-hidden">ВК</span>
             </a>
           </li>
-
           <li>
             <a
               class="social-link social-link_telegram"
@@ -201,7 +167,7 @@
     </main>
   </div>
 
-  <!--футер -->
+
   <footer class="main-footer">
     <div class="container">
       <p>2026 Сергей Константинов</p>
