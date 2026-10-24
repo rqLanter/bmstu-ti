@@ -1,10 +1,8 @@
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-
 
 :root {
   --txt-color: #212121;
@@ -12,7 +10,6 @@
   --bg-color: #ffffff;
 }
 
-/* по фрейму Fonts & Colors (замечание 1) */
 html,
 body {
   margin: 0;
@@ -20,7 +17,7 @@ body {
 
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 20px;          /*  текст 20/150 */
+  font-size: 20px;
   line-height: 1.5;
   color: var(--txt-color);
   background-color: var(--bg-color);
@@ -31,31 +28,32 @@ img {
   display: block;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 0;
   font-weight: 700;
 }
 
 h1 {
   font-size: 60px;
-  line-height: 1.1;         /* 60/110 */
+  line-height: 1.1;
 }
 
 h2 {
-  font-size: 30px;          /* было 24 — стало 30 */
-  line-height: 1.2;         /* 30/120 */
+  font-size: 30px;
+  line-height: 1.2;
   margin-bottom: 24px;
 }
 
 h3 {
-  font-size: 24px;          /* было 20 — стало 24 */
-  line-height: 1.2;         /* 24/120 */
+  font-size: 24px;
+  line-height: 1.2;
 }
 
 p {
   margin: 0 0 16px;
 }
-
 
 a {
   font-size: 20px;
@@ -70,14 +68,12 @@ button:focus-visible {
   outline-offset: 2px;
 }
 
-
 .container {
   max-width: 1280px;
   margin: 0 auto;
   padding-left: 20px;
   padding-right: 20px;
 }
-
 
 .main-header {
   padding-top: 24px;
@@ -106,9 +102,8 @@ button:focus-visible {
   color: var(--green);
 }
 
-
 button {
-  padding: 10px 6px;
+  padding: 6px 10px 10px;
   border: 1px solid var(--green);
   border-radius: 8px;
   color: var(--green);
@@ -124,7 +119,6 @@ button:hover {
   background-color: var(--green);
   color: var(--bg-color);
 }
-
 
 section {
   padding-top: 32px;
@@ -153,7 +147,6 @@ section {
 .skills-controls button {
   margin-left: 8px;
 }
-
 
 .skill-list {
   margin: 0;
@@ -196,7 +189,6 @@ section {
 .skill-item_cpp    { background-image: url("../img/c++.svg"); }
 .skill-item_python { background-image: url("../img/python.svg"); }
 
-
 .contact {
   margin: 0 0 24px;
   padding: 0;
@@ -216,6 +208,7 @@ section {
   color: var(--txt-color);
   background-repeat: no-repeat;
   background-position: left center;
+  background-size: 30px;
 }
 
 .contact-link:hover {
@@ -224,14 +217,11 @@ section {
 
 .contact-link_phone {
   background-image: url("../img/phone.svg");
-  background-size: 30px;
 }
 
 .contact-link_mail {
   background-image: url("../img/mail.svg");
-  background-size: 30px;
 }
-
 
 .social {
   margin: 0;
@@ -246,40 +236,23 @@ section {
 }
 
 .social-link {
-  position: relative;
   display: block;
   width: 50px;
   height: 50px;
   border: 1px solid var(--green);
   border-radius: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 30px;
 }
-
-.social-link::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 24px;
-  height: 24px;
-  transform: translate(-50%, -50%);
-  background-color: var(--green);
-  mask-image: var(--social-icon);
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-}
-
-.social-link_github    { --social-icon: url("../img/github.svg"); }
-.social-link_vk        { --social-icon: url("../img/vk.svg"); }
-.social-link_telegram  { --social-icon: url("../img/telegram.svg"); }
 
 .social-link:hover {
   background-color: var(--green);
 }
 
-.social-link:hover::before {
-  background-color: var(--bg-color);
-}
+.social-link_github   { background-image: url("../img/git2.svg"); }
+.social-link_vk       { background-image: url("../img/vk2.svg"); }
+.social-link_telegram { background-image: url("../img/tg2.svg"); }
 
 .visually-hidden {
   position: absolute;
@@ -293,7 +266,6 @@ section {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 
 .main-footer {
   margin-top: 40px;
