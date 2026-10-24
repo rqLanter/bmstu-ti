@@ -5,13 +5,14 @@
   box-sizing: border-box;
 }
 
+
 :root {
   --txt-color: #212121;
-  --green: #0ab59e;   
+  --green: #09a494;
   --bg-color: #ffffff;
 }
 
-
+/* по фрейму Fonts & Colors (замечание 1) */
 html,
 body {
   margin: 0;
@@ -19,8 +20,8 @@ body {
 
 body {
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;           /* 24 / 16 */
+  font-size: 20px;          /*  текст 20/150 */
+  line-height: 1.5;
   color: var(--txt-color);
   background-color: var(--bg-color);
 }
@@ -30,29 +31,25 @@ img {
   display: block;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
   margin: 0;
   font-weight: 700;
 }
 
-
 h1 {
   font-size: 60px;
-  line-height: 1.1;
+  line-height: 1.1;         /* 60/110 */
 }
 
-
 h2 {
-  font-size: 24px;
-  line-height: 1.3333;
+  font-size: 30px;          /* было 24 — стало 30 */
+  line-height: 1.2;         /* 30/120 */
   margin-bottom: 24px;
 }
 
 h3 {
-  font-size: 20px;
-  line-height: 1.5;
+  font-size: 24px;          /* было 20 — стало 24 */
+  line-height: 1.2;         /* 24/120 */
 }
 
 p {
@@ -62,7 +59,7 @@ p {
 
 a {
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 1;
   color: var(--green);
   text-decoration: none;
 }
@@ -81,9 +78,16 @@ button:focus-visible {
   padding-right: 20px;
 }
 
+
 .main-header {
   padding-top: 24px;
   padding-bottom: 24px;
+}
+
+.main-logo {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 16px;
 }
 
 .main-nav a {
@@ -104,15 +108,15 @@ button:focus-visible {
 
 
 button {
-  padding: 10px 24px;
+  padding: 10px 6px;
   border: 1px solid var(--green);
-  border-radius: 16px;
+  border-radius: 8px;
   color: var(--green);
   background-color: transparent;
   cursor: pointer;
   font: inherit;
   font-size: 20px;
-  line-height: 1.5;
+  line-height: 1;
   text-transform: lowercase;
 }
 
@@ -127,14 +131,12 @@ section {
   padding-bottom: 32px;
 }
 
-
 .subtitle {
   font-size: 38px;
   line-height: 1.2;
   color: var(--green);
   margin: 0 0 24px;
 }
-
 
 .profile-photo {
   width: 200px;
@@ -189,21 +191,11 @@ section {
   text-transform: lowercase;
 }
 
-.skill-item_html {
-  background-image: url("../img/html.svg");
-}
+.skill-item_html   { background-image: url("../img/html.svg"); }
+.skill-item_css    { background-image: url("../img/css.svg"); }
+.skill-item_cpp    { background-image: url("../img/c++.svg"); }
+.skill-item_python { background-image: url("../img/python.svg"); }
 
-.skill-item_css {
-  background-image: url("../img/css.svg");
-}
-
-.skill-item_cpp {
-  background-image: url("../img/c++.svg");
-}
-
-.skill-item_python {
-  background-image: url("../img/python.svg");
-}
 
 .contact {
   margin: 0 0 24px;
@@ -224,7 +216,6 @@ section {
   color: var(--txt-color);
   background-repeat: no-repeat;
   background-position: left center;
-  background-size: 30px;
 }
 
 .contact-link:hover {
@@ -233,10 +224,12 @@ section {
 
 .contact-link_phone {
   background-image: url("../img/phone.svg");
+  background-size: 30px;
 }
 
 .contact-link_mail {
   background-image: url("../img/mail.svg");
+  background-size: 30px;
 }
 
 
@@ -253,32 +246,40 @@ section {
 }
 
 .social-link {
+  position: relative;
   display: block;
   width: 50px;
   height: 50px;
-  border: none;
+  border: 1px solid var(--green);
   border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50px 50px;
 }
+
+.social-link::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  transform: translate(-50%, -50%);
+  background-color: var(--green);
+  mask-image: var(--social-icon);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.social-link_github    { --social-icon: url("../img/github.svg"); }
+.social-link_vk        { --social-icon: url("../img/vk.svg"); }
+.social-link_telegram  { --social-icon: url("../img/telegram.svg"); }
 
 .social-link:hover {
-  background-color: rgba(10, 181, 158, 0.12);
+  background-color: var(--green);
 }
 
-.social-link_github {
-  background-image: url("../img/github.svg");
+.social-link:hover::before {
+  background-color: var(--bg-color);
 }
-
-.social-link_vk {
-  background-image: url("../img/vk.svg");
-}
-
-.social-link_telegram {
-  background-image: url("../img/telegram.svg");
-}
-
 
 .visually-hidden {
   position: absolute;
