@@ -442,11 +442,8 @@ section {
   }
 
   .contact {
-
     margin-bottom: 20px;
-
-
-
+  }
 
   .main-footer {
     padding-top: 30px;
@@ -454,7 +451,7 @@ section {
   }
 }
 
-/* Переносим сортировку раньше, чтобы кнопки помещались и на 374 px. */
+
 @media screen and (max-width: 380px) {
   .skills-header,
   .skills-controls {
@@ -475,6 +472,5 @@ section {
   .contact {
     flex-direction: column;
     align-items: flex-start;
-
   }
 }
